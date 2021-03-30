@@ -1,23 +1,22 @@
 const TaskList = (props) => {
   const handleDelete = (todoID) => {
-    let remv = null;
     let tempTodo = [...props.todos];
     tempTodo.map((item) => {
-      if (item.id == todoID) remv = tempTodo.pop();
+      if (item.id === todoID) tempTodo.pop();
       props.setTodos(tempTodo);
       localStorage.setItem("data", JSON.stringify(tempTodo));
     });
     console.log(tempTodo);
   };
   return (
-    <div>
+    <div className="taskList">
       {props.todos &&
         props.todos.map((todo) => (
-          <div key={todo.id}>
+          <div className="taskListItem" key={todo.id}>
             <h2>{todo.name}</h2>
             <button
               onClick={() => {
-                props.handleDelete(todo.id);
+                handleDelete(todo.id);
               }}
             >
               DEL

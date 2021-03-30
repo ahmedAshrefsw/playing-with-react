@@ -9,16 +9,22 @@ const AddTodo = (props) => {
   };
 
   const handleAddNewTodo = () => {
+    if (name === "" || name === "enter valid task!") {
+      setName("enter valid task!");
+      return;
+    }
     let tempTodo = [...props.todos];
     let id = generateId(tempTodo);
     tempTodo.push({ name, id });
 
     props.setTodos(tempTodo);
     localStorage.setItem("data", JSON.stringify(tempTodo));
+    setName("");
   };
 
   return (
-    <div>
+    <div className="AddTodo">
+      <h1>Add new task</h1>
       <input
         type="text"
         name="newTodo"

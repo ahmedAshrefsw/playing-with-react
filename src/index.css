@@ -14,11 +14,13 @@ code {
 } */
 
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
 /* base styles */
 * {
   margin: 0;
   font-family: "Quicksand";
-  color: #333;
+  color: #ddd;
+  background-color: #333;
 }
 .navbar {
   padding: 20px;
@@ -27,6 +29,9 @@ code {
   max-width: 600px;
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
+}
+h1 {
+  color: #f1356d;
 }
 .navbar h1 {
   color: #f1356d;
@@ -47,4 +52,46 @@ code {
   margin: 40px auto;
   padding: 20px;
   /* background-color: aqua; */
+}
+/* .AddTodo h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+} */
+.AddTodo input {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 16px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.taskList {
+  margin-top: 25px;
+}
+.taskListItem {
+  display: flex;
+  /*   */
+}
+.taskListItem h2 {
+  padding-top: 13px;
+  margin-right: auto;
+}
+.taskListItem button {
+  margin-left: auto;
+}
+img {
+  width: 600px;
+  height: 400px;
+  margin-top: 10px;
 }
